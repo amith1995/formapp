@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Tenant</title>
+</head>
+
+<body>
+
+    <form action="/tenant-form.js" method="post">
+
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" placeholder="Account Name" name="accountName">
+        <br>
+        <!--<select onchange="onSelect(this);">
+            <label for="category">Type of account</label>
+            input type="radio" name="account-type" value="NewTenant" checked>Tenant
+            <input type="radio" name="account-type" value="NewLead">Lead
+        </select>-->
+
+        <div id="input-container">
+            <fieldset>
+                <legend>Basic Tenant Info</legend>
+                <input class="input-field" type="text" placeholder="Tenant Id" name="tenantId">
+                <input class="input-field" type="text" placeholder="OneBill Username" name="onebillusername">
+                <input class="input-field" type="password" placeholder="Onebill Password" id="oenbillpaswword" name="password">
+                <input type="checkbox" onclick="showPassword(onebillpassword)">Show password
+
+            </fieldset>
+            <fieldset>
+                <legend> Other Information</legend>
+
+
+                <input class="input-field" type="text" placeholder="Customer Name" name="customerName">
+
+                <input class="input-field" type="text" placeholder="Role" name="role">
+
+                <input class="input-field" type="email" placeholder="Customer Email" name="customerEmail">
+                <br>
+
+                <input class="input-field" type="text" placeholder="Support Lead" name="supportLead">
+                <input class="input-field" type="text" placeholder="Onboarding Lead" name="onboardingLead">
+
+            </fieldset>
+            <fieldset>
+                <legend>Other Logins</legend>
+
+                <input class="input-field" type="text" placeholder="FTP Username" name="ftpusername">
+                <input class="input-field" type="password" placeholder="FTP Password"  id="ftppassword" name="ftppassword">
+                <input type="checkbox" onclick="showPassword(ftppassword)">Show password
+                <br>
+
+                <input class="input-field" type="text" placeholder="Proactive Username" name="proactiveUserName">
+                <input class="input-field" type="password" placeholder="Proactive Password"  id="proactivePassword" name="proactivePassword">
+                <input type="checkbox" onclick="showPassword(proactivePassword)">Show password
+            </fieldset>
+        </div>
+
+        <!--<div id="ifNewLead" style="display: none;">
+        </div>-->
+
+        <button>Submit</button>
+    </form>
+
+
+</body>
+
+</html>
