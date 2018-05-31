@@ -1,0 +1,26 @@
+{
+  "name": "formapp",
+  "version": "1.0.1",
+  "description": "A cms app that stores tenant info for onebill",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amith1995/formapp.git"
+  },
+  "keywords": [
+    "CMS"
+  ],
+  "author": "Amith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amith1995/formapp/issues"
+  },
+  "homepage": "https://github.com/amith1995/formapp#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
+  }
+}
