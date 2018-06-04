@@ -1,0 +1,66 @@
+
+<form action="/createTenant/save" method="post" enctype="multipart/form-data">
+
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Account Name" name="accountName">
+    <input type="file" name="file" class="form-control">
+    <br>
+    <div id="input-container">
+        <fieldset>
+            <legend>Basic Tenant Info</legend>
+            <input class="input-field" type="text" placeholder="Tenant Id" name="tenantId">
+
+            <div class="productionLogin"> Production Login Credentials
+                <br>
+                <input class="input-field" type="text" placeholder="OneBill Username" name="obProductionUserName">
+                <input class="input-field" type="password" placeholder="Onebill Password" id="obProductionPassword" name="obProductionPassword">
+                <input type="button" onmousedown="showPassword('obProductionPassword')" onmouseup="hidePassword('obProductionPassword')">Show password
+            </div>
+            <div class="sandboxnLogin"> Sandbox Login Credentials
+                <br>
+                <input class="input-field" type="text" placeholder="OneBill Username" name="obSandboxUserName">
+                <input class="input-field" type="password" placeholder="Onebill Password" id="obSandboxPassword" name="obSandboxPassword">
+                <input type="button" onmousedown="showPassword('obSandboxPassword')" onmouseup="hidePassword('obSandboxPassword')">Show password
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Other Information</legend>
+            <div>
+                <input class="input-field" type="text" placeholder="Customer Name" name="customerName">
+
+                <input class="input-field" type="text" placeholder="Role" name="role">
+
+                <input class="input-field" type="email" placeholder="Customer Email" name="customerEmail">
+            </div>
+            <div>
+                <input class="input-field" type="text" placeholder="Support Lead" name="supportLead">
+                <input class="input-field" type="text" placeholder="Onboarding Lead" name="onboardingLead">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Other Related Logins</legend>
+            <div>
+                <input class="input-field" type="text" placeholder="FTP Username" name="ftpusername">
+                <input class="input-field" type="password" placeholder="FTP Password" id="ftppassword" name="ftppassword">
+                <input type="button" onmousedown="showPassword('ftppassword')" onmouseup="hidePassword('ftppassword')">
+                <br>
+            </div>
+            <div>
+                <input class="input-field" type="text" placeholder="Proactive Username" name="proactiveUserName">
+                <input class="input-field" type="password" placeholder="Proactive Password" id="proactivePassword" name="proactivePassword">
+                <input type="button" onmousedown="showPassword('proactivePassword')" onmouseup="hidePassword('proactivePassword')">
+            </div>
+    </div>
+
+    <script>
+    function showPassword(id) {
+   document.getElementById(id).type = "text";
+}
+    function hidePassword(id) {
+         document.getElementById(id).type = "password";
+    
+}
+</script>
+
+    <button>Submit</button>
+</form>

@@ -1,0 +1,49 @@
+<head>
+    <title>Account Info</title>
+</head>
+<div class="view-tenant">
+
+    <i class="fa fa-user icon " href="/search">back</i>
+    <div>
+        {{#each account}}
+        <h3>{{accountName}}</h3>
+    </div>
+    <img class="Account-logo" src="/uploads/{{tenantId}}/{{file}}" alt="default.png">
+    <button class="edit-optn" href="/edit">Edit Account</button>
+    <div>{{tenantId}}</div>
+    <div>Sandbox Credentials<br>
+        <label>username</label>
+        <p>{{obSandboxUserName}}</p><br>
+        <label>password</label>
+        <p>{{obSandboxPassword}}</p>
+    </div>
+    <div>Production Credentials<br>
+        <label>username</label>
+        <p>{{obProductionUserName}}</p><br>
+        <label>password</label>
+        <p>{{obProductionPassword}}</p>
+    </div>
+    <div>Customer Details<br>
+        <label>Name</label>
+        <p>{{customerName}}</p><br>
+        <label>email</label>
+        <p>{{customerEmail}}</p>
+    </div>
+     <div>Support Information<br>
+        <label>Support Lead</label>
+        <p>{{supportLead}}</p><br>
+        <label>Onboarding Lead</label>
+        <p>{{onboardingLead}}</p>
+    </div>
+    <div>Other Logins<br>
+        <label>FTP Username</label>
+        <p>{{ftpusername}}</p><br>
+        <label>FTP Password</label>
+        <p>{{ftppassword}}</p>
+        <label>Proactive Username</label>
+        <p>{{proactiveUserName}}</p><br>
+        <label>Proactive Password</label>
+        <p>{{proactivePassword}}</p>
+    </div>
+    {{/each}}
+</div>
